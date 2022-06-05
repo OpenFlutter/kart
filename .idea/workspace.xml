@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9932632e-b42f-4cac-98fa-182d037cfc91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/kart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -54,20 +54,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603366863205</updated>
-    </task>
-    <task id="LOCAL-00042" summary="bump to 3.1.2-nullsafety.1">
-      <created>1614599186456</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1614599186456</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Merge branch 'main_nullsafety' into dev&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml">
-      <created>1616545697911</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1616545697911</updated>
     </task>
     <task id="LOCAL-00044" summary="update wechat sdk">
       <created>1616545869448</created>
@@ -398,12 +384,24 @@
       <option name="project" value="LOCAL" />
       <updated>1653569504050</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="update .gitignore">
+      <created>1654433399670</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1654433399671</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add .pubignore">
+      <created>1654433454444</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1654433454444</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'dev'" />
-    <MESSAGE value="bump to 3.2.2" />
     <MESSAGE value="bump to v3.4.0" />
     <MESSAGE value="update doc" />
     <MESSAGE value="update demo" />
@@ -427,6 +425,8 @@
     <MESSAGE value="bump to 3.9.0" />
     <MESSAGE value="bump to 3.9.0+1" />
     <MESSAGE value="Merge branch 'master' of github.com:OpenFlutter/fluwx&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:OpenFlutter/fluwx&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml" />
+    <MESSAGE value="update .gitignore" />
+    <MESSAGE value="add .pubignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .pubignore" />
   </component>
 </project>
