@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9932632e-b42f-4cac-98fa-182d037cfc91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="9932632e-b42f-4cac-98fa-182d037cfc91" name="Default Changelist" comment="add ut.">
+      <change afterPath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_get_elements_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/foundation/cast.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/foundation/cast.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/foundation/kt/collections/iterables.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/foundation/kt/collections/iterables.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/foundation/pair/pair.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/foundation/pair/pair.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/foundation/string/strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/foundation/string/strings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +46,17 @@
       <recent name="$PROJECT_DIR$/doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Test.Tests in pair_test.dart">
+  <component name="RunManager" selected="Dart Test.Tests in iterables_test.dart">
+    <configuration name="Tests in iterables_get_elements_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterables_get_elements_test.dart" />
+      <option name="testName" value="iterables_get_elements_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in iterables_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" />
+      <option name="testName" value="iterables_test.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in pair_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/pair/pair_test.dart" />
       <option name="testName" value="pair_test.dart" />
@@ -54,6 +68,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.Tests in iterables_test.dart" />
+        <item itemvalue="Dart Test.Tests in iterables_get_elements_test.dart" />
         <item itemvalue="Dart Test.Tests in pair_test.dart" />
       </list>
     </recent_temporary>
@@ -69,20 +85,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603366863205</updated>
-    </task>
-    <task id="LOCAL-00042" summary="bump to 3.1.2-nullsafety.1">
-      <created>1614599186456</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1614599186456</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Merge branch 'main_nullsafety' into dev&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml">
-      <created>1616545697911</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1616545697911</updated>
     </task>
     <task id="LOCAL-00044" summary="update wechat sdk">
       <created>1616545869448</created>
@@ -413,7 +415,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653569504050</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="add docs.">
+      <created>1654519886680</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1654519886681</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add ut.">
+      <created>1654520120800</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1654520120800</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,10 +442,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'dev'" />
-    <MESSAGE value="bump to 3.2.2" />
     <MESSAGE value="bump to v3.4.0" />
     <MESSAGE value="update doc" />
     <MESSAGE value="update demo" />
@@ -453,6 +468,8 @@
     <MESSAGE value="bump to 3.9.0" />
     <MESSAGE value="bump to 3.9.0+1" />
     <MESSAGE value="Merge branch 'master' of github.com:OpenFlutter/fluwx&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:OpenFlutter/fluwx&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml" />
+    <MESSAGE value="add docs." />
+    <MESSAGE value="add ut." />
+    <option name="LAST_COMMIT_MESSAGE" value="add ut." />
   </component>
 </project>

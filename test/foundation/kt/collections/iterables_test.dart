@@ -44,7 +44,7 @@ void main() {
       expect(list.firstOrNull(), "test");
     });
 
-    test("empty nullable-iterable expect first element not null", () {
+    test("empty nullable-iterable expect first element null", () {
       Iterable<String>? list = [];
       expect(list.firstOrNull(), null);
     });
@@ -69,6 +69,20 @@ void main() {
     test("null nullable-iterable expect last element null", () {
       Iterable<String>? list;
       expect(list.lastOrNull(), null);
+    });
+  });
+
+  group('iterable lastIndex test', () {
+    test("lastIndex is Correct", () {
+      Iterable<String> list = ["test", "abc", "dart"];
+      var result = list.lastIndex;
+      expect(result, 2);
+    });
+
+    test("lastIndex is -1", () {
+      Iterable<String> list = [];
+      var result = list.lastIndex;
+      expect(result, -1);
     });
   });
 }
