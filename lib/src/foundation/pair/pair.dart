@@ -22,3 +22,9 @@ class Pair<F, S> {
 
   const Pair(this.first, this.second);
 }
+
+/// create pair for given elements first and second.
+///
+Pair<F, S> pairOf<F, S>(F first, S second) {
+  return Pair(first, second);
+}
