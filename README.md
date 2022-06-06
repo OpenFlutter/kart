@@ -25,7 +25,7 @@ For iterable
 - `firstOrNull()`
 - `lastOrNull()`
 - `lastIndex`
-- `getOrElse(int)`
+- `getOrElse(int,defaultValue)`
 - `getOrNull(int)`
 
 ## Other
