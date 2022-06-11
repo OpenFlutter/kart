@@ -9,4 +9,3 @@ export 'src/foundation/kt/collections/maps.dart';
 export 'src/foundation/cast.dart';
 export 'src/foundation/pair/pair.dart';
 export 'src/foundation/string/strings.dart';
-

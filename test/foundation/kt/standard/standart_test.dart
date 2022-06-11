@@ -24,7 +24,7 @@ void main() {
 
     test("repeat", () {
       var finalIndex = -1;
-      repeat(10, (index)=> finalIndex = index);
+      repeat(10, (index) => finalIndex = index);
       expect(finalIndex, 9);
     });
   });

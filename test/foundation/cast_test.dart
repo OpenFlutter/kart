@@ -2,7 +2,6 @@ import 'package:test/test.dart';
 import 'package:kart/kart.dart';
 
 void main() {
-
   group('cast test', () {
     test("cast", () {
       Iterable<String> hi = [""];
@@ -11,8 +10,8 @@ void main() {
     });
 
     test("safe cast", () {
-       int a = 1;
-       expect(a.safeCastTo<double>(),null);
+      int a = 1;
+      expect(a.safeCastTo<double>(), null);
     });
   });
 }

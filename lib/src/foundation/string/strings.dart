@@ -18,7 +18,6 @@
  */
 
 extension NullableStringExtension on String? {
-
   /// returns true when given string is null or empty.
   bool isNullOrBlank() {
     return this?.trim().isEmpty ?? true;
@@ -31,7 +30,6 @@ extension NullableStringExtension on String? {
 }
 
 extension StringExtension on String {
-
   bool isBlank() {
     return trim().isEmpty;
   }
