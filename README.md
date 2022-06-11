@@ -27,6 +27,8 @@ For iterable
 - `lastIndex`
 - `getOrElse(int,defaultValue)`
 - `getOrNull(int)`
+- `mapIndexed(int,element)`
+- `mapNotNull(element)`
 
 ## Other
 
