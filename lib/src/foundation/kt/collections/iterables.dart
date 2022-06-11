@@ -1,3 +1,5 @@
+import 'package:kart/kart.dart';
+
 class IndexedValue<T> {
   int index;
   T value;
@@ -86,7 +88,7 @@ extension GetElementsForIterable<E> on Iterable<E> {
   /// Iterable<int> iterables = [1, 2, 3, 4];
   /// var result = iterables.getOrElse(1, (index) => 66); // 2
   /// ```
-  E getOrElse(int index, IterableFallbackElement defaultValue) {
+  E getOrElse(int index, E Function(int) defaultValue) {
     if (index >= 0 && index <= lastIndex) {
       return elementAt(index);
     } else {
@@ -109,5 +111,43 @@ extension GetElementsForIterable<E> on Iterable<E> {
     } else {
       return null;
     }
+  }
+}
+
+extension MapForIterable<E> on Iterable<E> {
+  ///Returns a list containing the results of applying the given transform function to each element and its index in the original collection.
+  /// Params:
+  /// [transform] - function that takes the index of an element and the element itself and returns the result of the transform applied to the element.
+  ///
+  /// Example:
+  ///
+  ///   Iterable<int> iterables = [1, 2, 3, 4];
+  ///   var result = iterables.mapIndexed((index, element) => "$index$element");  // ["01", "12", "23", "34"]
+  ///
+  ///   Set<int> iterables = {1, 2, 3, 4};
+  ///   var result = iterables.mapIndexed((index, element) => "$index$element"); // ["01", "12", "23", "34"]
+  Iterable<R> mapIndexed<R>(R Function(int index, E e) transform) {
+    if (this is List<E>) {
+      return map((e) => transform((this as List<E>).indexOf(e), e));
+    }
+    return map((e) => transform(toList().indexOf(e), e));
+  }
+
+  ///Returns a list containing only the non-null results of applying the given transform function to each element in the original collection.
+  ///
+  /// Example:
+  /// [1, 2, null, 3, 4, null].mapNotNull((e) => "$e") // ["1", "2", "3", "4"]
+  ///
+  /// [1, 5, 3, 4].mapNotNull((e) => "$e")  // ["1", "5", "3", "4"]
+  ///
+  Iterable<R> mapNotNull<R extends Object>(R Function(E e) transform) {
+    var resultList = <R>[];
+    forEach((element) {
+      if (element != null) {
+        resultList.add(transform(element));
+      }
+    });
+
+    return resultList;
   }
 }

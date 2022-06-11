@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9932632e-b42f-4cac-98fa-182d037cfc91" name="Default Changelist" comment="add ut.">
-      <change afterPath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_get_elements_test.dart" afterDir="false" />
+    <list default="true" id="9932632e-b42f-4cac-98fa-182d037cfc91" name="Default Changelist" comment="bump to 1.0.1">
+      <change afterPath="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/foundation/kt/collections/iterables.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/foundation/kt/collections/iterables.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +45,34 @@
       <recent name="$PROJECT_DIR$/doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Test.Tests in iterables_test.dart">
-    <configuration name="Tests in iterables_get_elements_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterables_get_elements_test.dart" />
-      <option name="testName" value="iterables_get_elements_test.dart" />
+  <component name="RunManager" selected="Dart Test.mapNotNull NotContainsNull Expected Correct in iterable_map_test.dart">
+    <configuration name="Tests in iterable_map_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" />
+      <option name="testName" value="iterable_map_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in iterables_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterables_test.dart" />
-      <option name="testName" value="iterables_test.dart" />
+    <configuration name="iterable mapNotNull test in iterable_map_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="iterable mapNotNull test" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in pair_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/pair/pair_test.dart" />
-      <option name="testName" value="pair_test.dart" />
+    <configuration name="mapIndex List Expected Correct in iterable_map_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="mapIndex List Expected Correct" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mapIndex NotList Expected Correct in iterable_map_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="mapIndex NotList Expected Correct" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mapNotNull NotContainsNull Expected Correct in iterable_map_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/foundation/kt/collections/iterable_map_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="mapNotNull NotContainsNull Expected Correct" />
       <method v="2" />
     </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -68,9 +81,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Test.Tests in iterables_test.dart" />
-        <item itemvalue="Dart Test.Tests in iterables_get_elements_test.dart" />
-        <item itemvalue="Dart Test.Tests in pair_test.dart" />
+        <item itemvalue="Dart Test.mapNotNull NotContainsNull Expected Correct in iterable_map_test.dart" />
+        <item itemvalue="Dart Test.iterable mapNotNull test in iterable_map_test.dart" />
+        <item itemvalue="Dart Test.Tests in iterable_map_test.dart" />
+        <item itemvalue="Dart Test.mapIndex NotList Expected Correct in iterable_map_test.dart" />
+        <item itemvalue="Dart Test.mapIndex List Expected Correct in iterable_map_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -85,20 +100,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603366863205</updated>
-    </task>
-    <task id="LOCAL-00044" summary="update wechat sdk">
-      <created>1616545869448</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1616545869448</updated>
-    </task>
-    <task id="LOCAL-00045" summary="fix #350">
-      <created>1616545931849</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1616545931849</updated>
     </task>
     <task id="LOCAL-00046" summary="bump to 3.3.0">
       <created>1616546021192</created>
@@ -429,7 +430,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654520120800</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="add lastIndex, getOrElse, getOrNull to iterables.">
+      <created>1654522491548</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1654522491548</updated>
+    </task>
+    <task id="LOCAL-00094" summary="bump to 1.0.1">
+      <created>1654522643610</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1654522643610</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -445,8 +460,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bump to v3.4.0" />
-    <MESSAGE value="update doc" />
     <MESSAGE value="update demo" />
     <MESSAGE value="bump to 3.4.1" />
     <MESSAGE value="update docs" />
@@ -470,6 +483,8 @@
     <MESSAGE value="Merge branch 'master' of github.com:OpenFlutter/fluwx&#10;&#10;# Conflicts:&#10;#&#9;CHANGELOG.md&#10;#&#9;pubspec.yaml" />
     <MESSAGE value="add docs." />
     <MESSAGE value="add ut." />
-    <option name="LAST_COMMIT_MESSAGE" value="add ut." />
+    <MESSAGE value="add lastIndex, getOrElse, getOrNull to iterables." />
+    <MESSAGE value="bump to 1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="bump to 1.0.1" />
   </component>
 </project>
