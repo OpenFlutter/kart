@@ -130,7 +130,8 @@ extension MapForIterable<E> on Iterable<E> {
     if (this is List<E>) {
       return map((e) => transform((this as List<E>).indexOf(e), e));
     }
-    return map((e) => transform(toList().indexOf(e), e));
+    var tempList = toList();
+    return tempList.map((e) => transform(tempList.indexOf(e), e));
   }
 
   ///Returns a list containing only the non-null results of applying the given transform function to each element in the original collection.

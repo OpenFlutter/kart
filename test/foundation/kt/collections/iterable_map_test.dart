@@ -4,15 +4,24 @@ import 'package:test/test.dart';
 void main() {
   group('iterable mapIndex test', () {
     test("mapIndex List Expected Correct", () {
-      Iterable<int> iterables = [1, 2, 3, 4];
-      var result = iterables.mapIndexed((index, element) => "$index$element");
+      Iterable<_MapTestObject> iterables = [
+        _MapTestObject("1"),
+        _MapTestObject("2"),
+        _MapTestObject("3"),
+        _MapTestObject("4"),
+      ];
+      var result = iterables.mapIndexed((index, element) => "$index${element.identifier}");
 
       expect(result, ["01", "12", "23", "34"]);
     });
 
     test("mapIndex NotList Expected Correct", () {
-      Set<int> iterables = {1, 2, 3, 4};
-      var result = iterables.mapIndexed((index, element) => "$index$element");
+      Set<_MapTestObject> iterables = {
+        _MapTestObject("1"),
+        _MapTestObject("2"),
+        _MapTestObject("3"),
+        _MapTestObject("4"),};
+      var result = iterables.mapIndexed((index, element) => "$index${element.identifier}");
 
       expect(result, ["01", "12", "23", "34"]);
     });
@@ -33,4 +42,10 @@ void main() {
       expect(result, ["1", "5", "3", "4"]);
     });
   });
+}
+
+class _MapTestObject {
+  final String identifier;
+
+  _MapTestObject(this.identifier);
 }
