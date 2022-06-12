@@ -78,7 +78,7 @@ extension KtNullabeIterableExtension<E> on Iterable<E>? {
 typedef IterableFallbackElement<T> = T Function(int);
 
 extension GetElementsForIterable<E> on Iterable<E> {
-  /// Returns an element at the given index or the result of calling the defaultValue function if the index is out of bounds of this list.
+  /// Returns an element at the given index or the result of calling the [defaultValue] function if the index is out of bounds of this list.
   ///
   /// Example:
   /// ```dart

@@ -10,7 +10,8 @@ void main() {
         _MapTestObject("3"),
         _MapTestObject("4"),
       ];
-      var result = iterables.mapIndexed((index, element) => "$index${element.identifier}");
+      var result = iterables
+          .mapIndexed((index, element) => "$index${element.identifier}");
 
       expect(result, ["01", "12", "23", "34"]);
     });
@@ -20,8 +21,10 @@ void main() {
         _MapTestObject("1"),
         _MapTestObject("2"),
         _MapTestObject("3"),
-        _MapTestObject("4"),};
-      var result = iterables.mapIndexed((index, element) => "$index${element.identifier}");
+        _MapTestObject("4"),
+      };
+      var result = iterables
+          .mapIndexed((index, element) => "$index${element.identifier}");
 
       expect(result, ["01", "12", "23", "34"]);
     });
