@@ -1,3 +1,6 @@
+## 1.0.2+1
+* Fix mapIndex return -1 issue.
+
 ## 1.0.2
 * support mapIndexed and mapNotNull.
 
