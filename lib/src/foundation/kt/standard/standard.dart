@@ -18,13 +18,20 @@
  */
 
 extension KtStandardExtension<T> on T {
-  T let(void Function(T self) func) {
-    func(this);
-    return this;
+  /// Calls the specified function [block] with this value as its argument and returns its result.
+  /// Example:
+  ///
+  ///       String? str;
+  ///       var result = str?.let((self) {
+  ///         return self.isNotEmpty;
+  ///       }); // null
+  ///
+  R let<R>(R Function(T self) block) {
+    return block(this);
   }
 
-  T apply(void Function() func) {
-    func();
+  T apply(void Function() block) {
+    block();
     return this;
   }
 
@@ -45,6 +52,9 @@ extension KtStandardExtension<T> on T {
   }
 }
 
+extension KtStandardExtension2<T> on T {
+
+}
 ///Executes the given function action specified number of times.
 /// A zero-based index of current iteration is passed as a parameter to action.
 repeat(int times, Function(int index) action) {

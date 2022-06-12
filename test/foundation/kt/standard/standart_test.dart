@@ -27,5 +27,29 @@ void main() {
       repeat(10, (index) => finalIndex = index);
       expect(finalIndex, 9);
     });
+
+    test("let with?Operator Expect null", () {
+      String? str;
+      var result = str?.let((self) {
+        return self.isNotEmpty;
+      });
+      expect(result, null);
+    });
+
+    test("let without?Operator Expect 1", () {
+      String? str;
+      var result = str.let((self) {
+        return 111;
+      });
+      expect(result, 111);
+    });
+
+    test("let notNull", () {
+      String? str = "mapped";
+      var result = str.let((self) {
+        return self.isNotEmpty;
+      });
+      expect(result, true);
+    });
   });
 }
