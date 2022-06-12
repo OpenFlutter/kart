@@ -1,5 +1,6 @@
 ## 1.0.4
 * Fix let issue.
+* Add takeUnless.
 
 ## 1.0.3
 * Add getOrElse for map.

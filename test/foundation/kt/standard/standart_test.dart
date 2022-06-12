@@ -22,6 +22,19 @@ void main() {
       expect(result2, null);
     });
 
+    test("takeUnless PredicateTrue ExpectString", () {
+      String test = "James";
+
+      var result = test.takeUnless((self) => self == "Tom");
+      expect(result, "James");
+    });
+
+    test("takeUnless PredicateFalse ExpectNull", () {
+      String test = "James";
+      var result = test.takeUnless((self) => self == "James");
+      expect(result, null);
+    });
+
     test("repeat", () {
       var finalIndex = -1;
       repeat(10, (index) => finalIndex = index);

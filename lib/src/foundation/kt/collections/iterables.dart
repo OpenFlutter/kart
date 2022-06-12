@@ -99,11 +99,13 @@ extension GetElementsForIterable<E> on Iterable<E> {
   /// Returns an element at the given index or null if the index is out of bounds of this list.
   ///
   /// Example:
+  /// ```dart
   /// Iterable<int> iterables = [1, 2, 3, 4];
   /// var result = iterables.getOrNull(6); // null
   ///
   /// Iterable<int> iterables = [1, 2, 3, 4];
   /// var result = iterables.getOrNull(1); // 2
+  /// ```
   ///
   E? getOrNull(int index) {
     if (index >= 0 && index <= lastIndex) {
@@ -120,12 +122,13 @@ extension MapForIterable<E> on Iterable<E> {
   /// [transform] - function that takes the index of an element and the element itself and returns the result of the transform applied to the element.
   ///
   /// Example:
-  ///
+  ///```dart
   ///   Iterable<int> iterables = [1, 2, 3, 4];
   ///   var result = iterables.mapIndexed((index, element) => "$index$element");  // ["01", "12", "23", "34"]
   ///
   ///   Set<int> iterables = {1, 2, 3, 4};
   ///   var result = iterables.mapIndexed((index, element) => "$index$element"); // ["01", "12", "23", "34"]
+  ///   ```
   Iterable<R> mapIndexed<R>(R Function(int index, E e) transform) {
     if (this is List<E>) {
       List<E> list = this as List<E>;
@@ -138,9 +141,12 @@ extension MapForIterable<E> on Iterable<E> {
   ///Returns a list containing only the non-null results of applying the given transform function to each element in the original collection.
   ///
   /// Example:
+  ///
+  /// ```dart
   /// [1, 2, null, 3, 4, null].mapNotNull((e) => "$e") // ["1", "2", "3", "4"]
   ///
   /// [1, 5, 3, 4].mapNotNull((e) => "$e")  // ["1", "5", "3", "4"]
+  ///```
   ///
   Iterable<R> mapNotNull<R extends Object>(R Function(E e) transform) {
     var resultList = <R>[];

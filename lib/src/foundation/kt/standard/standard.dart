@@ -21,10 +21,12 @@ extension KtStandardExtension<T> on T {
   /// Calls the specified function [block] with this value as its argument and returns its result.
   /// Example:
   ///
+  /// ```dart
   ///       String? str;
   ///       var result = str?.let((self) {
   ///         return self.isNotEmpty;
   ///       }); // null
+  /// ```
   ///
   R let<R>(R Function(T self) block) {
     return block(this);
@@ -50,6 +52,24 @@ extension KtStandardExtension<T> on T {
       return null;
     }
   }
+
+  /// Returns this value if it does not satisfy the given predicate or null, if it does.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// "James".takeUnless((self) => self == "Tom"); // James
+  /// "James".takeUnless((self) => self == "James"); // null
+  ///
+  /// ```
+  T? takeUnless(bool Function(T self) predicate) {
+    if (!predicate(this)) {
+      return this;
+    } else {
+      return null;
+    }
+  }
+
 }
 
 extension KtStandardExtension2<T> on T {

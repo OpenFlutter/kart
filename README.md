@@ -12,6 +12,7 @@ For objects:
 - `run`
 - `also`
 - `takeIf`
+- `takeUnless`
 
 For strings:
 
