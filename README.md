@@ -30,6 +30,9 @@ For iterable
 - `mapIndexed(int,element)`
 - `mapNotNull(element)`
 
+For map
+- `getOrElse(key,defaultValue)`
+- 
 ## Other
 
 

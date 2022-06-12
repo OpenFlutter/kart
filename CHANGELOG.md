@@ -1,3 +1,6 @@
+## 1.0.3
+* Add getOrElse for map.
+
 ## 1.0.2+1
 * Fix mapIndex return -1 issue.
 
