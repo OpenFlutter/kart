@@ -69,12 +69,10 @@ extension KtStandardExtension<T> on T {
       return null;
     }
   }
-
 }
 
-extension KtStandardExtension2<T> on T {
+extension KtStandardExtension2<T> on T {}
 
-}
 ///Executes the given function action specified number of times.
 /// A zero-based index of current iteration is passed as a parameter to action.
 repeat(int times, Function(int index) action) {
