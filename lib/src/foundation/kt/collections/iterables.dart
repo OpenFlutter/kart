@@ -128,7 +128,8 @@ extension MapForIterable<E> on Iterable<E> {
   ///   var result = iterables.mapIndexed((index, element) => "$index$element"); // ["01", "12", "23", "34"]
   Iterable<R> mapIndexed<R>(R Function(int index, E e) transform) {
     if (this is List<E>) {
-      return map((e) => transform((this as List<E>).indexOf(e), e));
+      List<E> list = this as List<E>;
+      return map((e) => transform(list.indexOf(e), e));
     }
     var tempList = toList();
     return tempList.map((e) => transform(tempList.indexOf(e), e));
