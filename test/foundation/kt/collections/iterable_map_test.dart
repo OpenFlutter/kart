@@ -33,7 +33,7 @@ void main() {
   group('iterable mapNotNull test', () {
     test("mapNotNull containsNull Expected Correct", () {
       Iterable<int?> iterables = [1, 2, null, 3, 4, null];
-      var result = iterables.mapNotNull((e) => "$e");
+      var result = iterables.mapNotNull((e) => e?.toString());
 
       expect(result, ["1", "2", "3", "4"]);
     });
