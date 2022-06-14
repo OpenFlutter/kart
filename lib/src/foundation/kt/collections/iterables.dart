@@ -13,8 +13,8 @@ class IndexedValue<T> {
 }
 
 extension KtIterableExtension<E> on Iterable<E> {
-  Iterable<E> whereNot(bool Function(E element) test) =>
-      where((element) => !test(element));
+  Iterable<E> whereNot(bool Function(E it) test) =>
+      where((it) => !test(it));
 
   /// returns first element or [null]
   ///
@@ -26,6 +26,25 @@ extension KtIterableExtension<E> on Iterable<E> {
   /// var result = [1,2,3].firstOrNull() // 1
   E? firstOrNull() => isEmpty ? null : first;
 
+  ///
+  /// Returns the first element matching the given [predicate], or null if element was not found.
+  ///
+  /// Example:
+  /// ```dart
+  ///  {"Ada", "James", "Harden", "Bob", "Jane"}.firstOrNullIf((it) => it.length == 9); // null
+  ///  {"Ada", "James", "Harden", "Bob", "Jane"}.firstOrNullIf((it) => it.length == 4); // Jane
+  /// ```
+  ///
+  E? firstOrNullIf(bool Function(E it) predicate) {
+    for (var item in this) {
+      if (predicate(item)) {
+        return item;
+      }
+    }
+
+    return null;
+  }
+
   /// returns last element or [null]
   ///
   /// if `this` is is [null] or empty returns [null].
@@ -36,6 +55,29 @@ extension KtIterableExtension<E> on Iterable<E> {
   /// var result = [1,2,3].lastOrNull() // 3
   /// ```
   E? lastOrNull() => isEmpty ? null : last;
+
+  ///
+  /// Returns the last element matching the given [predicate], or null if element was not found.
+  ///
+  /// Example:
+  /// ```dart
+  ///  {"Ada", "James", "Harden", "Bob", "Jane"}.lastOrNullIf((it) => it.length == 9); // null
+  ///  {"Ada", "James", "Harden", "Bob", "Jane"}.lastOrNullIf((it) => it.length == 3); // Bob
+  /// ```
+  ///
+  E? lastOrNullIf(bool Function(E it) predicate) {
+    Iterator<E> it = iterator;
+    if (!it.moveNext()) {
+      return null;
+    }
+    E? result;
+    do {
+      if (predicate(it.current)) {
+        result = it.current;
+      }
+    } while (it.moveNext());
+    return result;
+  }
 
   /// Returns the index of the last item in the list or -1 if the list is empty.
   ///
@@ -50,29 +92,6 @@ extension KtIterableExtension<E> on Iterable<E> {
 
 extension KtNullabeIterableExtension<E> on Iterable<E>? {
   Iterable<E> orEmpty() => this ?? Iterable.empty();
-
-  /// returns first element or [null]
-  ///
-  /// if `this` is is [null] or empty returns [null].
-  ///
-  /// Example:
-  /// ```dart
-  /// var result = [].firstOrNull() // null
-  /// var result = [1,2,3].firstOrNull() // 1
-  E? firstOrNull() =>
-      (this == null || this?.isEmpty == true) ? null : this?.first;
-
-  /// returns last element or [null]
-  ///
-  /// if `this` is is [null] or empty returns [null].
-  ///
-  /// Example:
-  /// ```dart
-  /// var result = [].lastOrNull() // null
-  /// var result = [1,2,3].lastOrNull() // 3
-  /// ```
-  E? lastOrNull() =>
-      (this == null || this?.isEmpty == true) ? null : this?.last;
 }
 
 typedef IterableFallbackElement<T> = T Function(int);

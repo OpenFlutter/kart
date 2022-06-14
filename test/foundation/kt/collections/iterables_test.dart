@@ -48,11 +48,6 @@ void main() {
       Iterable<String>? list = [];
       expect(list.firstOrNull(), null);
     });
-
-    test("null nullable-iterable expect first element null", () {
-      Iterable<String>? list;
-      expect(list.firstOrNull(), null);
-    });
   });
 
   group('nullable test lastOrNull', () {
@@ -65,10 +60,33 @@ void main() {
       Iterable<String>? list = [];
       expect(list.lastOrNull(), null);
     });
+  });
 
-    test("null nullable-iterable expect last element null", () {
-      Iterable<String>? list;
-      expect(list.lastOrNull(), null);
+  group('test firstOrNullIf', () {
+    test("firstOrNullIf nameLengthIs3 ExpectJane", () {
+      Iterable<String>? names = {"Ada", "James", "Harden", "Bob", "Jane"};
+      var result = names.firstOrNullIf((it) => it.length == 4);
+      expect(result, "Jane");
+    });
+
+    test("firstOrNullIf nameLengthIs8 ExpectNull", () {
+      Iterable<String>? names = {"Ada", "James", "Harden", "Bob", "Jane"};
+      var result = names.firstOrNullIf((it) => it.length == 9);
+      expect(result, null);
+    });
+  });
+
+  group('test lastOrNullIf', () {
+    test("lastOrNullIf nameLengthIs3 ExpectBob", () {
+      Iterable<String>? names = {"Ada", "Jame", "Harden", "Bob", "Jane"};
+      var result = names.lastOrNullIf((it) => it.length == 3);
+      expect(result, "Bob");
+    });
+
+    test("lastOrNullIf nameLengthIs9 ExpectNull", () {
+      Iterable<String>? names = {"Ada", "Jame", "Harden", "Bob", "Jane"};
+      var result = names.lastOrNullIf((it) => it.length == 9);
+      expect(result, null);
     });
   });
 
