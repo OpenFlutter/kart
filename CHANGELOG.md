@@ -1,3 +1,6 @@
+## 1.0.4+1
+* Fix mapNotNull issue.
+
 ## 1.0.4
 * Fix let issue.
 * Add takeUnless.
