@@ -30,6 +30,13 @@ For iterable
 - `getOrNull(int)`
 - `mapIndexed(int,element)`
 - `mapNotNull(element)`
+- `firstOrNullIf(predicate)`
+- `lastOrNullIf(predicate)`
+
+For List
+
+- `firstOrNullIf(predicate)`
+- `lastOrNullIf(predicate)`
 
 For map
 - `getOrElse(key,defaultValue)`

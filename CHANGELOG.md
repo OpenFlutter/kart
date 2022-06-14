@@ -1,3 +1,6 @@
+## 1.0.5
+* fistOrNullIf, lastOrNullIf for List and Iterable.
+
 ## 1.0.4+1
 * Fix mapNotNull issue.
 
