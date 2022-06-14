@@ -162,16 +162,17 @@ extension MapForIterable<E> on Iterable<E> {
   /// Example:
   ///
   /// ```dart
-  /// [1, 2, null, 3, 4, null].mapNotNull((e) => "$e") // ["1", "2", "3", "4"]
+  /// [1, 2, null, 3, 4, null].mapNotNull((e) => e?.toString()) // ["1", "2", "3", "4"]
   ///
   /// [1, 5, 3, 4].mapNotNull((e) => "$e")  // ["1", "5", "3", "4"]
   ///```
   ///
-  Iterable<R> mapNotNull<R extends Object>(R Function(E e) transform) {
+  Iterable<R> mapNotNull<R extends Object>(R? Function(E? e) transform) {
     var resultList = <R>[];
     forEach((element) {
-      if (element != null) {
-        resultList.add(transform(element));
+      final item = transform(element);
+      if (item != null) {
+        resultList.add(item);
       }
     });
 
