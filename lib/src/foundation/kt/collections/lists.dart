@@ -9,8 +9,13 @@ extension ElementsOnList<E> on List<E> {
   /// ```
   ///
   E? firstOrNullIf(bool Function(E it) predicate) {
-    for (E element in this) {
+    int length = this.length;
+    for (int i = 0; i < length; i++) {
+      E element = this[i];
       if (predicate(element)) return element;
+      if (length != this.length) {
+        throw ConcurrentModificationError(this);
+      }
     }
     return null;
   }
@@ -25,15 +30,14 @@ extension ElementsOnList<E> on List<E> {
   /// ```
   ///
   E? lastOrNullIf(bool Function(E it) predicate) {
-    late E result;
-    bool foundMatching = false;
-    for (E element in this) {
-      if (predicate(element)) {
-        result = element;
-        foundMatching = true;
+    int length = this.length;
+    for (int i = length - 1; i >= 0; i--) {
+      E element = this[i];
+      if (predicate(element)) return element;
+      if (length != this.length) {
+        throw ConcurrentModificationError(this);
       }
     }
-    if (foundMatching) return result;
     return null;
   }
 }
