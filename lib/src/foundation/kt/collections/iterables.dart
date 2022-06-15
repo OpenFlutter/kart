@@ -13,8 +13,7 @@ class IndexedValue<T> {
 }
 
 extension KtIterableExtension<E> on Iterable<E> {
-  Iterable<E> whereNot(bool Function(E it) test) =>
-      where((it) => !test(it));
+  Iterable<E> whereNot(bool Function(E it) test) => where((it) => !test(it));
 
   /// returns first element or [null]
   ///
@@ -177,5 +176,26 @@ extension MapForIterable<E> on Iterable<E> {
     });
 
     return resultList;
+  }
+}
+
+extension ForEachOnIterable<E> on Iterable<E> {
+  ///
+  /// Performs the given [action] on each element, providing sequential index with the element.
+  /// Params:
+  /// [action] - function that takes the index of an element and the element itself and performs the action on the element.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  ///       Iterable<String> list = ["James", "Morgan", "Bon"];
+  ///       List<String> result = [];
+  ///       list.forEachIndexed((index, element) => result.add("$index$element")); // ["James", "Morgan", "Bon"]
+  /// ```
+  forEachIndexed(Function(int index, E element) action) {
+    var i = 0;
+    for (final e in this) {
+      action(i++, e);
+    }
   }
 }
