@@ -32,6 +32,7 @@ For iterable
 - `mapNotNull(element)`
 - `firstOrNullIf(predicate)`
 - `lastOrNullIf(predicate)`
+- `forEachIndexed(index,element)`
 
 For List
 
