@@ -199,3 +199,58 @@ extension ForEachOnIterable<E> on Iterable<E> {
     }
   }
 }
+
+extension IterableJoinToString<E> on Iterable<E> {
+  /// Appends the string from all the elements separated using separator and using the given [prefix] and [postfix] if supplied.
+  /// If the collection could be huge, you can specify a non-negative value of [limit], in which case only the first limit elements will be appended,
+  /// followed by the [truncated] string (which defaults to "...").
+  ///
+  ///  Example:
+  ///
+  /// ```dart
+  /// final result = [1, 2, 3, 4, 5].joinToString(); // 1, 2, 3, 4, 5
+  ///
+  /// final result = [1, 2, 3, 4, 5].joinToString(
+  ///   separator: ".",
+  ///   prefix: "prefix",
+  ///   postfix: "postfix",
+  ///   transform: (e) => "${e + 1}"); // prefix2.3.4.5.6postfix
+  ///
+  ///  final result = [1, 2, 3, 4, 5].joinToString(
+  ///     limit: 4,
+  ///    truncated: "^^^"); // 1, 2, 3, 4, ^^^
+  /// ```
+
+  String joinToString({
+    String separator = ', ',
+    String Function(E element)? transform,
+    String prefix = '',
+    String postfix = '',
+    int limit = -1,
+    String truncated = '...',
+  }) {
+    final buffer = StringBuffer();
+    var count = 0;
+
+    buffer.write(prefix);
+    for (final element in this) {
+      if (++count > 1) buffer.write(separator);
+      if (limit < 0 || count <= limit) {
+        if (transform != null) {
+          buffer.write(transform(element));
+        } else {
+          buffer.write(element.toString());
+        }
+      } else {
+        break;
+      }
+    }
+
+    if (limit >= 0 && count > limit) {
+      buffer.write(truncated);
+    }
+
+    buffer.write(postfix);
+    return buffer.toString();
+  }
+}
