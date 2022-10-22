@@ -8,6 +8,12 @@ void main() {
       expect(result, "1, 2, 3, 4, 5");
     });
 
+    test("joinToString withNullable", () {
+      final result = [1, 2, 3, 4, 5, null].joinToString();
+      expect(result, "1, 2, 3, 4, 5, null");
+    });
+
+
     test("joinToString ", () {
       final result = [1, 2, 3, 4, 5].joinToString(
         separator: ".",
