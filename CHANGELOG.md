@@ -1,3 +1,6 @@
+## 1.0.6
+* joinToString for iterable.
+
 ## 1.0.5
 * fistOrNullIf, lastOrNullIf for List and Iterable.
 

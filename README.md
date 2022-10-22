@@ -33,6 +33,7 @@ For iterable
 - `firstOrNullIf(predicate)`
 - `lastOrNullIf(predicate)`
 - `forEachIndexed(index,element)`
+- `joinToString`
 
 For List
 
