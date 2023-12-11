@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:kart/kart.dart';
 import 'package:test/test.dart';
 
@@ -25,6 +27,36 @@ void main() {
       Iterable<int> iterables = [1, 2, 3, 4];
       var result = iterables.getOrNull(1);
       expect(result, 2);
+    });
+  });
+
+  group("firstNotNullOfOrNull", () {
+    test("non-null value was produced | return 1", () {
+      Iterable<String> iterables = ["Ada", "John", "James", "Linda"];
+
+      var result = iterables.firstNotNullOfOrNull(transform: (e) {
+        if (e == "James") {
+          return 1;
+        } else {
+          return null;
+        }
+      });
+
+      expect(result, 1);
+    });
+
+    test("no non-null value was produced | return null", () {
+      Iterable<String> iterables = ["Ada", "John", "James", "Linda"];
+
+      int? result = iterables.firstNotNullOfOrNull(transform: (e) {
+        if (e == "Arthur") {
+          return null;
+        } else {
+          return null;
+        }
+      });
+
+      expect(result, null);
     });
   });
 }

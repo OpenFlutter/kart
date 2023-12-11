@@ -1,5 +1,3 @@
-import 'package:kart/kart.dart';
-
 class IndexedValue<T> {
   int index;
   T value;
@@ -131,6 +129,39 @@ extension GetElementsForIterable<E> on Iterable<E> {
     } else {
       return null;
     }
+  }
+
+  /// Returns the first non-null value produced by [transform] function being applied to elements of this
+  /// collection in iteration order, or null if no non-null value was produced.
+  /// Example:
+  /// ```dart
+  /// Iterable<String> iterables = ["Ada", "John", "James", "Linda"];
+  ///       var result = iterables.firstNotNullOfOrNull(transform: (e) {
+  ///         if (e == "James") {
+  ///           return 1;
+  ///        } else {
+  ///           return null;
+  ///         }
+  ///      }); // result is 1
+  ///
+  ///      int? result = iterables.firstNotNullOfOrNull(transform: (e) {
+  ///         if (e == "Arthur") {
+  ///           return 2;
+  ///         } else {
+  ///           return null;
+  ///         }
+  ///       }); //result is null
+  ///
+  R? firstNotNullOfOrNull<R extends Object?>(
+      {required R? Function(E e) transform}) {
+    for (var element in this) {
+      var result = transform(element);
+      if (result != null) {
+        return result;
+      }
+    }
+
+    return null;
   }
 }
 
