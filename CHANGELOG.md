@@ -1,3 +1,6 @@
+# 1.0.7
+* firstNotNullOfOrNull for iterable.
+
 ## 1.0.6
 * joinToString for iterable.
 
