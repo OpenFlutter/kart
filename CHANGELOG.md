@@ -1,3 +1,6 @@
+# 1.0.8
+* orEmpty for List and Map.
+
 # 1.0.7
 * firstNotNullOfOrNull for iterable.
 
