@@ -1,8 +1,9 @@
+import 'dart:math';
+
 import 'package:kart/kart.dart';
 import 'package:test/test.dart';
 
 void main() {
-
   group('test firstOrNullIf', () {
     test("firstOrNullIf nameLengthIs3 ExpectJane", () {
       List<String>? names = ["Ada", "James", "Harden", "Bob", "Jane"];
@@ -28,6 +29,20 @@ void main() {
       List<String>? names = ["Ada", "James", "Harden", "Bob", "Jane"];
       var result = names.lastOrNullIf((it) => it.length == 9);
       expect(result, null);
+    });
+  });
+
+  group("nullable list", () {
+    test("orEmpty | given list is null | returns empty", () {
+      List<String>? list;
+      var result = list.orEmpty();
+      expect(result, []);
+    });
+
+    test("orEmpty | given list is not null | returns self", () {
+      List<String>? list = ["Ada"];
+      var result = list.orEmpty();
+      expect(result, ["Ada"]);
     });
   });
 }

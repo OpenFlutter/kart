@@ -22,4 +22,17 @@ extension KtMapGetExtension<K, V> on Map<K, V> {
   }
 }
 
-extension KtNullableMapExtension<K, V> on Map<K, V> {}
+extension KtNullableMapExtension<K, V> on Map<K, V>? {
+  /// Returns the Map if its not null, or the empty Map otherwise.
+  ///
+  /// Example:
+  /// ```dart
+  ///   Map<String,String>? map ;
+  ///       var result = map.orEmpty(); // {}
+  ///   Map<String,String>? map = {
+  ///         "lan":"dart"
+  ///       };
+  ///       var result = map.orEmpty(); // {"lan":"dart"}
+  /// ```
+  Map<K, V> orEmpty() => this ?? {};
+}

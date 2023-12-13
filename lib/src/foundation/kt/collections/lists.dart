@@ -41,3 +41,16 @@ extension ElementsOnList<E> on List<E> {
     return null;
   }
 }
+
+extension KtNullableListExtension<T> on List<T>? {
+  /// Returns this List if it's not null and the empty list otherwise.
+  ///
+  /// Example:
+  /// ```dart
+  ///       List<String>? list;
+  ///       var result = list.orEmpty(); // []
+  ///      List<String>? list = ["Ada"];
+  ///       var result = list.orEmpty(); // ["Ada"]
+  /// ```
+  List<T> orEmpty() => this ?? [];
+}
