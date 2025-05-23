@@ -10,5 +10,12 @@ void main() {
       expect("first", result.first);
       expect(1, result.second);
     });
+
+    test("pair equal", () {
+      var pair1 = pairOf("first", 2);
+      var pair2 = pairOf("first", 2);
+
+      assert(pair1 == pair2);
+    });
   });
 }
