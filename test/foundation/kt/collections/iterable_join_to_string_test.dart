@@ -13,7 +13,6 @@ void main() {
       expect(result, "1, 2, 3, 4, 5, null");
     });
 
-
     test("joinToString ", () {
       final result = [1, 2, 3, 4, 5].joinToString(
         separator: ".",
@@ -25,10 +24,7 @@ void main() {
     });
 
     test("joinToString truncated", () {
-      final result = [1, 2, 3, 4, 5].joinToString(
-        limit: 4,
-        truncated: "^^^"
-      );
+      final result = [1, 2, 3, 4, 5].joinToString(limit: 4, truncated: "^^^");
       expect(result, "1, 2, 3, 4, ^^^");
     });
   });
