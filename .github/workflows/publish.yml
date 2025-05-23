@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - uses: ./.github/actions/publish_dart_package
+      - uses: ./.github/action/publish_dart_package
