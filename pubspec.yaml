@@ -1,6 +1,6 @@
 name: kart
 description: Taste and smell dart a little like Kotlin. We can feel magic of Kotin even in dart.
-version: 1.0.8
+version: 1.0.9
 homepage: https://github.com/OpenFlutter/kart
 
 environment:
