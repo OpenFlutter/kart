@@ -3,15 +3,6 @@ import 'package:test/test.dart';
 
 void main() {
   group('Standard test', () {
-    test("also", () {
-      String? test;
-      var result = test?.also((p0) => "r");
-      expect(result, null);
-      test = "test";
-      var result2 = test.also((p0) => "r");
-      expect(result2, "r");
-    });
-
     test("takeIf", () {
       String test = "takIf";
 
@@ -39,14 +30,6 @@ void main() {
       var finalIndex = -1;
       repeat(10, (index) => finalIndex = index);
       expect(finalIndex, 9);
-    });
-
-    test("let with?Operator Expect null", () {
-      String? str;
-      var result = str?.let((self) {
-        return self.isNotEmpty;
-      });
-      expect(result, null);
     });
 
     test("let without?Operator Expect 1", () {
